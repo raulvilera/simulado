@@ -1,6 +1,6 @@
 # Simulado de Geografia — 6º Ano B
 
-Atividade interativa em HTML, CSS e JavaScript para o 3º bimestre, construída a partir dos temas do PDF enviado: estrutura da Terra, placas tectônicas, vulcanismo, erosão, relevo litorâneo, solos urbanos e exploração de recursos minerais.
+Atividade interativa em HTML, CSS e JavaScript para o 3º bimestre, construída a partir dos temas do PDF enviado: estrutura da Terra, placas tectônicas, vulcanismo, erosão, relevo litorâneo, formação dos solos, impactos ambientais urbanos e enchentes.
 
 ## Arquivos
 
@@ -21,4 +21,4 @@ Para trocar nome, série ou cabeçalho, edite os campos dentro de `.student-stri
 
 ## Conteúdo e autoria
 
-Os enunciados foram redigidos com base nos conteúdos identificados no PDF fornecido pelo usuário. As ilustrações são SVGs autorais, sem dependência de internet, para garantir que as imagens apareçam mesmo quando a atividade for aberta offline.
+Os enunciados foram redigidos com base nos conteúdos identificados no PDF fornecido pelo usuário. As ilustrações são SVGs autorais, sem dependência de internet, para garantir que as imagens apareçam mesmo quando a atividade for aberta offline. A décima questão foi alinhada ao levantamento: propor medidas para reduzir erosão, lixo e enchentes em solos urbanos.
