@@ -66,7 +66,34 @@ function syncSelectedOption(input) {
   if (!input || input.type !== 'radio') return;
   const group = form.querySelectorAll(`input[type="radio"][name="${input.name}"]`);
   group.forEach((radio) => {
-    radio.closest('.option')?.classList.toggle('is-selected', radio.checked);
+    const option = radio.closest('.option');
+    const letter = option?.querySelector('.option-letter');
+    option?.classList.toggle('is-selected', radio.checked);
+    if (radio.checked) {
+      option.style.backgroundColor = '#244d40';
+      option.style.color = '#ffffff';
+      option.style.fontWeight = '700';
+      option.style.transform = 'translateY(4px)';
+      option.style.borderColor = '#18382f';
+      option.style.boxShadow = 'inset 4px 4px 9px rgba(10,29,23,.34), inset -2px -2px 5px rgba(71,124,99,.2), 0 1px 0 #18382f';
+      if (letter) {
+        letter.style.backgroundColor = '#16382e';
+        letter.style.color = '#ffffff';
+        letter.style.fontWeight = '700';
+      }
+    } else {
+      option.style.backgroundColor = '';
+      option.style.color = '';
+      option.style.fontWeight = '';
+      option.style.transform = '';
+      option.style.borderColor = '';
+      option.style.boxShadow = '';
+      if (letter) {
+        letter.style.backgroundColor = '';
+        letter.style.color = '';
+        letter.style.fontWeight = '';
+      }
+    }
   });
 }
 
@@ -127,7 +154,7 @@ function handleSubmit(event) {
 function resetObjectiveFeedback() {
   form.querySelectorAll('input[type="radio"]').forEach((input) => {
     input.checked = false;
-    input.closest('.option')?.classList.remove('is-selected');
+    syncSelectedOption(input);
   });
   clearObjectiveFeedback();
   resultPanel.hidden = true;
