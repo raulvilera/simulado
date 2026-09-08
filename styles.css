@@ -114,9 +114,11 @@ h1 { max-width: 760px; margin-bottom: 14px; font: 700 clamp(42px, 7vw, 78px)/.94
 .option:hover { transform: translateY(-3px); border-color: var(--mustard); box-shadow: 0 8px 0 #cfc6b6, 0 14px 22px rgba(18,38,58,.1); }
 .option:has(input:focus-visible) { outline: 3px solid rgba(236,121,94,.35); outline-offset: 2px; }
 .option:has(input:checked) { transform: translateY(4px); border-color: #18382f; background: #244d40; color: #fff; font-weight: 700; box-shadow: inset 4px 4px 9px rgba(10,29,23,.34), inset -2px -2px 5px rgba(71,124,99,.2), 0 1px 0 #18382f; }
+.option.is-selected { transform: translateY(4px); border-color: #18382f; background: #244d40; color: #fff; font-weight: 700; box-shadow: inset 4px 4px 9px rgba(10,29,23,.34), inset -2px -2px 5px rgba(71,124,99,.2), 0 1px 0 #18382f; }
 .option input { position: absolute; opacity: 0; pointer-events: none; }
 .option-letter { display: grid; place-items: center; flex: 0 0 30px; height: 30px; border-radius: 9px; color: var(--ink); background: var(--paper-dark); font: 700 12px 'DM Mono', monospace; }
 .option:has(input:checked) .option-letter { color: #fff; background: #16382e; font-weight: 700; }
+.option.is-selected .option-letter { color: #fff; background: #16382e; font-weight: 700; }
 .answer-feedback { min-height: 23px; margin: 15px 0 0; font-size: 14px; font-weight: 600; }
 .answer-feedback.is-correct { color: #3e7652; }.answer-feedback.is-wrong { color: var(--coral-dark); }.answer-feedback.is-empty { color: #987c4c; }
 .essay-label { display: block; margin-bottom: 8px; color: var(--moss); }

@@ -62,6 +62,14 @@ function updateEssayCount(event) {
   updateProgress();
 }
 
+function syncSelectedOption(input) {
+  if (!input || input.type !== 'radio') return;
+  const group = form.querySelectorAll(`input[type="radio"][name="${input.name}"]`);
+  group.forEach((radio) => {
+    radio.closest('.option')?.classList.toggle('is-selected', radio.checked);
+  });
+}
+
 function markObjectiveFeedback(index, isCorrect, selected) {
   const feedback = document.getElementById(`feedback-${index}`);
   const card = document.querySelector(`[data-index="${index}"]`);
@@ -117,13 +125,19 @@ function handleSubmit(event) {
 }
 
 function resetObjectiveFeedback() {
-  form.querySelectorAll('input[type="radio"]').forEach((input) => { input.checked = false; });
+  form.querySelectorAll('input[type="radio"]').forEach((input) => {
+    input.checked = false;
+    input.closest('.option')?.classList.remove('is-selected');
+  });
   clearObjectiveFeedback();
   resultPanel.hidden = true;
   updateProgress();
 }
 
-form.addEventListener('change', updateProgress);
+form.addEventListener('change', (event) => {
+  syncSelectedOption(event.target);
+  updateProgress();
+});
 form.addEventListener('input', updateEssayCount);
 form.addEventListener('submit', handleSubmit);
 
