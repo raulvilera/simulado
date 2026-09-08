@@ -7,7 +7,7 @@ Atividade interativa em HTML, CSS e JavaScript para o 3º bimestre, construída 
 - `index.html`: estrutura, enunciados, alternativas e campos dissertativos.
 - `styles.css`: identidade visual responsiva e versão para impressão.
 - `script.js`: progresso, correção das 7 objetivas, contador de caracteres, impressão e gabarito docente.
-- `assets/`: 10 imagens JPG realistas, uma para cada questão; os arquivos são locais e carregam sem depender de links externos.
+- `assets/`: 10 imagens JPG realistas, uma para cada questão, mais o globo 3D do banner; os arquivos são locais e carregam sem depender de links externos.
 
 ## Como usar
 
