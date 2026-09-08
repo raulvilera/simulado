@@ -18,6 +18,28 @@ const resultPanel = document.getElementById('result-panel');
 const resultScore = document.getElementById('result-score');
 const resultTitle = document.getElementById('result-title');
 const resultMessage = document.getElementById('result-message');
+const lightbox = document.getElementById('image-lightbox');
+const lightboxImage = document.getElementById('lightbox-image');
+const lightboxCaption = document.getElementById('lightbox-caption');
+const lightboxClose = document.getElementById('lightbox-close');
+
+function openLightbox(image) {
+  const figure = image.closest('.question-visual');
+  lightboxImage.src = image.currentSrc || image.src;
+  lightboxImage.alt = image.alt;
+  lightboxCaption.textContent = figure?.querySelector('figcaption')?.textContent || image.alt;
+  lightbox.hidden = false;
+  lightbox.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('lightbox-open');
+  lightboxClose.focus();
+}
+
+function closeLightbox() {
+  lightbox.hidden = true;
+  lightbox.setAttribute('aria-hidden', 'true');
+  lightboxImage.src = '';
+  document.body.classList.remove('lightbox-open');
+}
 
 function getAnsweredCount() {
   const objectiveAnswered = Object.keys(answerKey).filter((key) => form.elements[key]?.value).length;
@@ -107,6 +129,14 @@ form.addEventListener('submit', handleSubmit);
 
 document.getElementById('print-button').addEventListener('click', () => window.print());
 document.getElementById('reset-button').addEventListener('click', resetObjectiveFeedback);
+document.querySelectorAll('.question-visual img').forEach((image) => {
+  image.addEventListener('click', () => openLightbox(image));
+});
+lightboxClose.addEventListener('click', closeLightbox);
+lightbox.querySelector('[data-lightbox-close]').addEventListener('click', closeLightbox);
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && !lightbox.hidden) closeLightbox();
+});
 
 document.querySelectorAll('.key-toggle').forEach((button) => {
   button.addEventListener('click', () => {

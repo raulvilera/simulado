@@ -203,6 +203,15 @@
 
     <footer class="site-footer"><span>Simulado de Geografia · 3º Bimestre</span><span>Feito para observar, pensar e cuidar do lugar onde vivemos.</span></footer>
   </main>
+  <div class="image-lightbox" id="image-lightbox" hidden aria-hidden="true">
+    <div class="lightbox-backdrop" data-lightbox-close></div>
+    <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-labelledby="lightbox-caption">
+      <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Fechar imagem ampliada">×</button>
+      <img id="lightbox-image" src="" alt="" />
+      <p id="lightbox-caption"></p>
+      <span class="lightbox-tip">Clique fora da imagem ou pressione Esc para fechar</span>
+    </div>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
