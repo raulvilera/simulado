@@ -7,7 +7,7 @@ Atividade interativa em HTML, CSS e JavaScript para o 3º bimestre, construída 
 - `index.html`: estrutura, enunciados, alternativas e campos dissertativos.
 - `styles.css`: identidade visual responsiva e versão para impressão.
 - `script.js`: progresso, correção das 7 objetivas, contador de caracteres, impressão e gabarito docente.
-- `assets/`: 10 ilustrações SVG locais, uma para cada questão.
+- `assets/`: 10 imagens JPG realistas, uma para cada questão; os arquivos são locais e carregam sem depender de links externos.
 
 ## Como usar
 
@@ -21,4 +21,4 @@ Para trocar nome, série ou cabeçalho, edite os campos dentro de `.student-stri
 
 ## Conteúdo e autoria
 
-Os enunciados foram redigidos com base nos conteúdos identificados no PDF fornecido pelo usuário. As ilustrações são SVGs autorais, sem dependência de internet, para garantir que as imagens apareçam mesmo quando a atividade for aberta offline. A décima questão foi alinhada ao levantamento: propor medidas para reduzir erosão, lixo e enchentes em solos urbanos.
+Os enunciados foram redigidos com base nos conteúdos identificados no PDF fornecido pelo usuário. As imagens realistas foram geradas para fins educacionais e salvas localmente, sem dependência de links externos. A décima questão foi alinhada ao levantamento: propor medidas para reduzir erosão, lixo e enchentes em solos urbanos.
